@@ -11,6 +11,8 @@ fn release() {
     .contains("support@mycompany.com")
     .stderr()
     .contains("support.mycompany.com")
+    .stderr()
+    .contains("https://github.com/test/test-issues")
     .fails_with(101)
     .unwrap();
 }
